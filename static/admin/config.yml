@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "/src/pages/event/media"
+public_folder: "media"
+
+collections:
+  - name: "event"
+    label: "Event"
+    folder: "src/pages/event"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tagline", name: "tagline", widget: "string"}
+      - {label: "Event Date", name: "event_date", widget: "datetime"}
+      - {label: "Submission deadline", name: "cfp_date", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Travel expenses covered", name: "expenses", widget: "string"}
+      - {label: "Conference page", name: "conf_link", widget: "string"}
+      - {label: "CFP page", name: "cfp_link", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/about"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
