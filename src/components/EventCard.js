@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
-const EventCard = ( event ) => (
+const EventCard = ({ event }) => (
   <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={event.id}>
     <p>
       <Link className="has-text-primary" to={event.frontmatter.path}>
@@ -20,4 +21,4 @@ const EventCard = ( event ) => (
   </div>
 );
 
-export default FeatureGrid;
+export default EventCard;
