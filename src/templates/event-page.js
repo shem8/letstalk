@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 export default function Template({ data }) {
-  const { markdownRemark: post } = data;
+  // const { markdownRemark: post } = data;
   return (
     <div>event page</div>
   );
