@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import './EventCard.sass';
 
 const EventCard = ({ event }) => (
-  <Link to={event.frontmatter.path}>
     <div className="card" key={event.id}>
       <div className="card-content">
         <div className="level-top level">
@@ -19,12 +18,12 @@ const EventCard = ({ event }) => (
           </div>
           <div className="level-right">
             <div>
-              <div className="date-event">
+              <p className="date-event">
                 <span className="icon">
                   <i className="fa fa-calendar-o"></i>
                 </span>
                 {event.frontmatter.date}
-              </div>
+              </p>
               <p className="date-cfp">
                 <span className="icon">
                   <i className="fa fa-file-text-o"></i>
@@ -41,13 +40,15 @@ const EventCard = ({ event }) => (
           </div>
         </div>
       </div>
-      <div className="card-footer event-card-footer">
-        <a className="button is-primary" href={event.frontmatter.cfp_link}>
+      <div className="card-footer event-card-footer level">
+        <Link to={event.frontmatter.path} className="button is-link level-left">
+          More info >
+        </Link>
+        <a className="button is-primary level-right" href={event.frontmatter.cfp_link}>
          Submit
         </a>
       </div>
     </div>
-  </Link>
 );
 
 export default EventCard;

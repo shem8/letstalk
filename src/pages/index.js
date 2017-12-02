@@ -28,7 +28,7 @@ export default class IndexPage extends React.Component {
         />
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <h1 className="has-text-weight-bold is-size-2">Open Events</h1>
           </div>
           {posts.filter(post => post.node.frontmatter.templateKey === 'event-page').map(({ node: post }) => {
             return <EventCard event={post}/>;
