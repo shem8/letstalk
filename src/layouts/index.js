@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
 import './all.sass';
-import 'font-awesome/css/font-awesome.min.css'
+// import 'font-awesome/css/font-awesome.min.css'
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
