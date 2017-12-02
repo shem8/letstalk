@@ -51,6 +51,15 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             path
+            subtitle
+            location
+            deadline(formatString: "MMMM DD, YYYY")
+            expenses
+            expenses_desc
+            event_link
+            cfp_link
+            twitter
+            facebook
           }
         }
       }

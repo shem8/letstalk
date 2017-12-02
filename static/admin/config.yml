@@ -30,7 +30,6 @@ collections:
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
-      - {label: "Event Date", name: "date", widget: "datetime"}
       - {label: "Submission deadline", name: "deadline", widget: "datetime"}
       - {label: "Travel expenses", name: "expenses", widget: "boolean"}
       - {label: "Travel expenses description", name: "expenses_desc", widget: "text"}

@@ -16,6 +16,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
+              subtitle
+              location
+              deadline
+              expenses
+              expenses_desc
+              event_link
+              cfp_link
+              twitter
+              facebook
               image {
                 childImageSharp {
                   resolutions(width: 1400) {

@@ -1,56 +1,47 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import './EventCard.sass';
 
 const EventCard = ({ event }) => (
   <Link to={event.frontmatter.path}>
-  <div className="card" key={event.id}>
-    <div className="card-content">
-      <div className="card-header">
-        <div className="card-header-title">
-          <p class="title">
-              {event.frontmatter.title}
-            <span> &bull; </span>
-            <small>{event.frontmatter.date}</small>
-          </p>
-          <p class="subtitle">
-            {event.frontmatter.subtitle}
-          </p>
-          <p class="location">
-            {event.frontmatter.location}
-          </p>
-        </div>
-        <div className="card-header-dates">
-          <p className="card-header-dates-event">
-            Event date: {event.frontmatter.date}
-          </p>
-          <p className="card-header-dates-cfp">
-            CFP deadline: {event.frontmatter.deadline}
-          </p>
+    <div className="card" key={event.id}>
+      <div className="card-content">
+        <div className="level-top level">
+          <div className="level-left">
+            <div>
+              <h1 className="title">
+                {event.frontmatter.title}
+              </h1>
+              <h2 className="subtitle">
+                {event.frontmatter.subtitle}
+              </h2>
+            </div>
+          </div>
+          <div className="level-right">
+            <div>
+              <div className="date-event">
+                <span className="icon">
+                  <i className="fa fa-home"></i>
+                </span>
+                {event.frontmatter.date}
+              </div>
+              <p className="date-cfp">
+                {event.frontmatter.deadline}
+              </p>
+              <p className="location">
+                {event.frontmatter.location}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <p>
-        {event.excerpt}
-        <br/>
-        <a class="button is-primary" href={event.frontmatter.cfp_link}>
+      <div className="card-footer event-card-footer">
+        <a className="button is-primary" href={event.frontmatter.cfp_link}>
          Submit
         </a>
-        <a class="button is-info" href={event.frontmatter.event_link}>
-         Event homepage
-        </a>
-        <a class="button is-small" href={event.frontmatter.facebook}>
-         Facebook
-        </a>
-        <a class="button is-small" href={event.frontmatter.twitter}>
-         Twitter
-        </a>
-      </p>
+      </div>
     </div>
-  </div>
   </Link>
 );
 
 export default EventCard;
-
-
-  // - {label: "Travel expenses", name: "expenses", widget: "boolean"}
-  // - {label: "Travel expenses description", name: "expenses_desc", widget: "text"}
