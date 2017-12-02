@@ -21,14 +21,20 @@ const EventCard = ({ event }) => (
             <div>
               <div className="date-event">
                 <span className="icon">
-                  <i className="fa fa-home"></i>
+                  <i className="fa fa-calendar-o"></i>
                 </span>
                 {event.frontmatter.date}
               </div>
               <p className="date-cfp">
+                <span className="icon">
+                  <i className="fa fa-file-text-o"></i>
+                </span>
                 {event.frontmatter.deadline}
               </p>
               <p className="location">
+                <span className="icon">
+                  <i className="fa fa-map-marker"></i>
+                </span>
                 {event.frontmatter.location}
               </p>
             </div>
