@@ -21,19 +21,25 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
-      <section className="section">
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={this.handleScriptLoad.bind(this)}
-        />
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Open Events</h1>
+      <section className="articles">
+        <div className="column is-8 is-offset-2">
+          <Script
+            url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+            onLoad={this.handleScriptLoad.bind(this)}
+          />
+          <section className="hero is-danger is-bold is-small promo-block">
+            <div className="hero-body">
+              <div className="container">
+                <h1 className="title">
+                   Open Events
+                </h1>
+              </div>
+            </div>
+          </section>
+            {posts.filter(post => post.node.frontmatter.templateKey === 'event-page').map(({ node: post }) => {
+              return <EventCard event={post}/>;
+            })}
           </div>
-          {posts.filter(post => post.node.frontmatter.templateKey === 'event-page').map(({ node: post }) => {
-            return <EventCard event={post}/>;
-          })}
-        </div>
       </section>
     );
   }

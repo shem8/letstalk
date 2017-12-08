@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import './EventCard.sass';
 
 const EventCard = ({ event }) => (
-    <div className="card" key={event.id}>
+    <div className="card article" key={event.id}>
       <div className="card-content">
         <div className="level-top level">
           <div className="level-left">
