@@ -5,8 +5,8 @@ import './EventCard.sass';
 const EventCard = ({ event }) => (
     <div className="card article" key={event.id}>
       <div className="card-content">
-        <div className="level-top level">
-          <div className="level-left">
+        <div className="columns">
+          <div className="column is-two-thirds">
             <div>
               <h1 className="title">
                 {event.frontmatter.title}
@@ -16,7 +16,7 @@ const EventCard = ({ event }) => (
               </h2>
             </div>
           </div>
-          <div className="level-right">
+          <div className="column">
             <div>
               <p className="date-event">
                 <span className="icon">
