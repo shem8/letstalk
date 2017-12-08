@@ -4,7 +4,6 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
-import SubmitEvent from '../components/SubmitEvent'
 import './all.sass';
 import './index.sass';
 import 'font-awesome/css/font-awesome.min.css'
