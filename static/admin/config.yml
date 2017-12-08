@@ -25,19 +25,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
-      - {label: "Path", name: "path", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Submission deadline", name: "deadline", widget: "datetime"}
       - {label: "Travel expenses", name: "expenses", widget: "boolean"}
-      - {label: "Travel expenses description", name: "expenses_desc", widget: "text"}
+      - {label: "Travel expenses description", name: "expenses_desc", widget: "text", require: "false"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Event link", name: "event_link", widget: "string"}
       - {label: "CFP link", name: "cfp_link", widget: "string"}
-      - {label: "Twitter", name: "twitter", widget: "string"}
-      - {label: "Facebook", name: "facebook", widget: "string"}
+      - {label: "Twitter", name: "twitter", widget: "string", require: "false"}
+      - {label: "Facebook", name: "facebook", widget: "string", require: "false"}
 
 
   - name: "pages"
