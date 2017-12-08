@@ -4,11 +4,13 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
+import SubmitEvent from '../components/SubmitEvent'
 import './all.sass';
+import './index.sass';
 import 'font-awesome/css/font-awesome.min.css'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
+  <nav className="navbar is-transparent has-shadow">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
@@ -17,30 +19,58 @@ const Navbar = () => (
           </figure>
         </Link>
       </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank" rel="noopener noreferrer">
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
     </div>
   </nav>
 );
 
+const Menu = () => (
+      <div className="menu">
+        <ul className="menu-list">
+          <li>
+            <div className="compose has-text-centered">
+              <a className="button is-danger is-block is-bold">
+                <span className="compose">Compose</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <ul className="menu-list">
+          <li>
+            <a href="/" className="item active">
+              Open events
+            </a>
+          </li>
+          <li>
+            <a href="/upcoming" className="item">
+              Upcoming events
+            </a>
+          </li>
+          <li>
+            <a href="/past" className="item">
+              Past events
+            </a>
+          </li>
+          <li>
+            <a href="/about" className="item">
+              About
+            </a>
+          </li>
+      </ul>
+    </div>
+);
+
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Home" />
     <Navbar />
-    <div>{children()}</div>
+    <div className="columns" id="app">
+      <aside className="column is-3 aside hero is-fullheight">
+        <Menu />
+      </aside>
+      <div className="column is-9 app-content">
+        {children()}
+      </div>
+    </div>
   </div>
 );
 
