@@ -8,8 +8,8 @@ location: 'Chicago, IL'
 deadline: 2017-12-29T10:57:10+02:00
 expenses: true
 expenses_desc: 'Airfare ($500 domestic, $1500 international), up to $150/night lodging stipend'
-event_link: chicagoroboto.com
-cfp_link: chicagoroboto.com/call-for-papers
+event_link: 'http://chicagoroboto.com'
+cfp_link: 'http://chicagoroboto.com/call-for-papers'
 twitter: '@chicagoroboto'
 facebook: 'https://www.facebook.com/chicagoroboto/'
 ---

@@ -44,7 +44,7 @@ const EventCard = ({ event }) => (
         <Link to={event.frontmatter.path} className="button is-link level-left">
           More info >
         </Link>
-        <a className="button is-primary level-right" href={event.frontmatter.cfp_link}>
+        <a className="button is-primary level-right" href={event.frontmatter.cfp_link} target="_blank">
          Submit
         </a>
       </div>

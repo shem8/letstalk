@@ -8,8 +8,8 @@ location: 'Portland, OR'
 deadline: 2018-01-18T11:00:32+02:00
 expenses: true
 expenses_desc: Case-by-case basis
-event_link: writethedocs.org/conf/portland/2018
-cfp_link: writethedocs.org/conf/portland/2018/cfp
+event_link: 'http://writethedocs.org/conf/portland/2018'
+cfp_link: 'http://writethedocs.org/conf/portland/2018/cfp'
 twitter: '@writethedocs'
 facebook: '-'
 ---

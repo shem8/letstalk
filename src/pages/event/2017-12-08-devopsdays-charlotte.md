@@ -12,8 +12,8 @@ expenses: true
 expenses_desc: >-
   If not employed or travel is not covered by employer, we can provide
   assistance! Please request it on the CFP form.
-event_link: devopsdays.org/events/2018-charlotte
-cfp_link: papercall.io/dodclt2018
+event_link: 'http://devopsdays.org/events/2018-charlotte'
+cfp_link: 'http://papercall.io/dodclt2018'
 twitter: '@devopsdays_clt'
 facebook: 'https://www.facebook.com/dodclt/'
 ---
