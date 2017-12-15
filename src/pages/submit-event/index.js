@@ -34,7 +34,7 @@ render() {
         className="section"
         name="submit-event"
         method="post"
-        action="/thanks/"
+        action="/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}>
@@ -45,49 +45,49 @@ render() {
         <div className="field">
           <label className="label">Event Title</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="title" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Subtitle</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="subtitle" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Event description</label>
           <div className="control">
-            <textarea className="textarea" onChange={this.handleChange}></textarea>
+            <textarea name="desc" className="textarea" onChange={this.handleChange}></textarea>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Event date</label>
           <div className="control">
-            <input className="input" type="date" onChange={this.handleChange}></input>
+            <input name="date" className="input" type="date" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">CFP deadline</label>
           <div className="control">
-            <input className="input" type="date" onChange={this.handleChange}></input>
+            <input name="cfp-date" className="input" type="date" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Location</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="location" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <div className="control">
             <label className="checkbox">
-              <input type="checkbox" onChange={this.handleChange}/> Travel expenses
+              <input name="expenses" type="checkbox" onChange={this.handleChange}/> Travel expenses
             </label>
           </div>
         </div>
@@ -95,35 +95,35 @@ render() {
         <div className="field">
           <label className="label">Travel expenses cover</label>
           <div className="control">
-            <textarea className="textarea" rows="2" onChange={this.handleChange}></textarea>
+            <textarea name="expenses-desc" className="textarea" rows="2" onChange={this.handleChange}></textarea>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Event link</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="event-link" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">CFP link</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="cfp-link" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Twitter link</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="twitter" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
         <div className="field">
           <label className="label">Facebook page</label>
           <div className="control">
-            <input className="input" type="text" onChange={this.handleChange}></input>
+            <input name="fb" className="input" type="text" onChange={this.handleChange}></input>
           </div>
         </div>
 
