@@ -27,7 +27,7 @@ const Menu = () => (
         <ul className="menu-list">
           <li>
             <div className="compose has-text-centered">
-              <a className="button is-danger is-block is-bold">
+              <a href="/submit-event" className="button is-danger is-block is-bold">
                 <span className="compose">Compose</span>
               </a>
             </div>

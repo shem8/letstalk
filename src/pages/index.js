@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
-      <section class="section">
+      <section className="section">
         <div className="columns">
           <Script
             url="https://identity.netlify.com/v1/netlify-identity-widget.js"
