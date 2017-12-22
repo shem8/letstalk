@@ -20,7 +20,7 @@ export default class SubmitEvent extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "submit-event", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -32,15 +32,8 @@ render() {
   return (
       <form
         className="section"
-        name="submit-event"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}>
 
-        <label hidden>
-          Don’t fill this out: <input name="form-name" value="submit-event" />
-        </label>
         <div className="field">
           <label className="label">Event Title</label>
           <div className="control">
