@@ -34,13 +34,12 @@ render() {
         className="section"
         name="submit-event"
         method="post"
-        action="/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}>
 
         <label hidden>
-          Don’t fill this out: <input name="bot-field" />
+          Don’t fill this out: <input name="form-name" value="submit-event" />
         </label>
         <div className="field">
           <label className="label">Event Title</label>
